@@ -34,7 +34,7 @@ export default function Store () {
     const fetchPropertiesData = async () => {
       try {
         const response = await axios.get(
-          "http://makeup-api.herokuapp.com/api/v1/products.json"
+          "https://makeup-api.herokuapp.com/api/v1/products.json"
         );
     const first15Products: Product[] = response.data.slice(430, 900);
         setProducts(first15Products);
@@ -101,7 +101,7 @@ const paginate = (pageNumber:number) =>  setCurrentPage(pageNumber)
 
 
 
-            <div className="lg:grid lg:grid-cols-4 gap-x-4 grid grid-cols-1 gap-y-4 p-12">
+            <div className="lg:grid lg:grid-cols-4 gap-x-4 grid grid-cols-1 gap-y-4 p-12 ">
             {currentPosts.map((data:Product , index:number ) => (
           <div key={index} className="p-4 cursor-pointer hover:scale-110 transition ease-in-out  " >
             <div onClick={() => productDetails(data.id)} >

@@ -38,7 +38,7 @@ export default function Search() {
           setIsLoading(true);
           setError(null);
 
-          const response = await axios.get(`http://makeup-api.herokuapp.com/api/v1/products.json?brand=${query}`);
+          const response = await axios.get(`https://makeup-api.herokuapp.com/api/v1/products.json?brand=${query}`);
           const data = response.data
           setSearchResults(data);
           setIsLoading(false);

@@ -14,10 +14,10 @@ export default function Home() {
   
 
   return (
-    <div className='h-screen w-full'>
+    <div className=' w-[100%] '  >
       <BrowserRouter>
         <Navbar  />
-        <div>
+        <div >
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path='/Search' element={<Search  />} />

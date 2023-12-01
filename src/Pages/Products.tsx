@@ -5,7 +5,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { useCart } from "../Context/cartContext";
 import { useNavigate } from 'react-router-dom';
-
+import { ColorRing } from 'react-loader-spinner';
 
 interface Product {
   image_link: string;
@@ -33,22 +33,24 @@ export default function Products() {
 
 
   const [features, setFeatures] = useState<Product[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   const fetchPropertiesData = async () => {
     try {
       const response = await axios.get(
-        "http://makeup-api.herokuapp.com/api/v1/products.json"
+        "https://makeup-api.herokuapp.com/api/v1/products.json"
       );
 
       // Extract the first 15 products
       const first15Products: Product[] = response.data.slice(85, 100);
-
+      setIsLoading(false)
       setFeatures(first15Products);
-      console.log(first15Products)
       
     } catch (error) {
       console.error(`Error fetching data: ${error}`);
-    }
+      setIsLoading(false);
+      setFeatures([])
+    } 
   };
 
   useEffect(() => {
@@ -99,6 +101,18 @@ export default function Products() {
       <h1 className="text-[25px] p-8 flex justify-center items-center">
         Today's Beauty Steals
       </h1>
+      {isLoading ? (
+
+<div className='flex justify-center items-center'>
+  <ColorRing
+  visible={true}
+  height="100"
+  width="100"
+  ariaLabel="blocks-loading"
+  colors={['#080808', '#D2D2D2', '#AAAAAA', '#BDBDBD', '#FFFFFFF']}
+  
+/>
+</div> ) : (
 
       <Slider {...settings}>
         {features.map((data:Product, index:number) => (
@@ -142,7 +156,7 @@ export default function Products() {
           </div>
         ))}
       </Slider>
-      
+)}
     </div>
   );
 }

@@ -3,7 +3,7 @@ import {HiOutlineMail} from 'react-icons/hi'
 
 export default function Footer ()  {
     return (
-<div className="bg-gray-500 text-black p-8 text-[18px]">
+<div className="bg-gray-500 text-black p-8 text-[18px] ">
         <div className="flex-col  w-[80%] mx-auto space-y-10 ">
             <p className="flex justify-center items-center text-[25px] ">Join Us</p>
             <p className=" lg:w-[60%] w-full mx-auto"> We will let you know when we have new arrivals,

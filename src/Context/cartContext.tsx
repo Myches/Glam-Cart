@@ -50,7 +50,7 @@ export function CartContextProvider({ children }: CartContextProviderProps) {
   const fetchPropertiesData = async () => {
     try {
       const response = await axios.get(
-        "http://makeup-api.herokuapp.com/api/v1/products.json"
+        "https://makeup-api.herokuapp.com/api/v1/products.json"
       );
 
       

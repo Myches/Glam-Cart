@@ -41,7 +41,7 @@ export default function Details() {
   }, [id]);
 
   return (
-    <div className='w-full bg-black text-gray-400 lg:h-[100vh] h-[100%] flex justify-center items-center overflow-hidden'>
+    <div className='w-full bg-black text-gray-400 lg:h-[100vh] h-[100%]  flex justify-center items-center '>
       {isLoading ? (
         <div className='flex justify-center items-center'>
           <ColorRing
