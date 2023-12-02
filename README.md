@@ -1,31 +1,48 @@
+GLAM CART
+A beauty e-commerce web app developed using React and Typescript that displays make-up products ,allows users to search for products by brand and also add products to cart.
 
-# React + TypeScript + Vite
+Table of Contents
+Getting Started
+Prerequisites
+Installation
+Usage
+Built With
+Contributing
+License
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Getting Started
+To get a copy of the project up and running on your local machine, follow these steps:
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Prerequisites
+Node.js
+npm or Yarn
 
 
->>>>>>> 667ddf7518e16a18e639f7fdd399adac1d97958a
+Installation
+Clone the repository: git clone git clone https://github.com/Myches/Glam-Cart.git
+Navigate to the project directory: cd buzziness
+Install dependencies: npm install or yarn install
+
+Usage
+Run "npm run dev" to start development server
+Run "npm run build" to build the project for production
+
+
+Built With
+React
+TypeScript
+Vite
+Tailwind CSS
+React slick
+
+Contributing
+Fork the repository
+Create a new branch
+Make your changes and commit them with descriptive messages
+Submit a pull request
+
+License
+Specify the license under which your project is distributed. For example:
+This project is licensed under the  - see the LICENSE.md file for details.
+
+
